@@ -39,11 +39,6 @@ namespace HelloLeagueSharp
             Language = new Regex("locale=(.+)_").Match(propFile).Groups[1].Value;
         }
 
-        static void serverip()
-        {
-            Game.PrintChat("Kullanilan Dil: " + Language);
-        }
-
         static void PrintMessage()
         {
             if (Language == "tr")
@@ -53,9 +48,93 @@ namespace HelloLeagueSharp
 
             if (Language == "cz")
             {
-                Game.PrintChat("LeagueSharp'a hoşgeldiniz!");
+                Game.PrintChat("Vítejte na LeagueSharp!");
             }
 
+            if (Language == "de")
+            {
+                Game.PrintChat("Willkommen bei LeagueSharp!");
+            }
+
+            if (Language == "gr")
+            {
+                Game.PrintChat("Καλώς ήλθατε στο LeagueSharp!");
+            }
+
+            if (Language == "au")
+            {
+                Game.PrintChat("Welcome to LeagueSharp!");
+            }
+
+            if (Language == "gb")
+            {
+                Game.PrintChat("Welcome to LeagueSharp!");
+            }
+
+            if (Language == "us")
+            {
+                Game.PrintChat("Welcome to LeagueSharp!");
+            }
+
+            if (Language == "ar")
+            {
+                Game.PrintChat("Bem-vindo ao LeagueSharp!");
+            }
+
+            if (Language == "es")
+            {
+                Game.PrintChat("Bienvenido a LeagueSharp!");
+            }
+
+            if (Language == "mx")
+            {
+                Game.PrintChat("Bienvenido a LeagueSharp!");
+            }
+
+            if (Language == "fr")
+            {
+                Game.PrintChat("Bienvenue à LeagueSharp!");
+            }
+
+            if (Language == "hu")
+            {
+                Game.PrintChat("Üdvözöljük a LeagueSharp!");
+            }
+
+            if (Language == "it")
+            {
+                Game.PrintChat("Benvenuti a LeagueSharp!");
+            }
+
+            if (Language == "jp")
+            {
+                Game.PrintChat("Welcome to LeagueSharp!");
+            }
+
+            if (Language == "kr")
+            {
+                Game.PrintChat("LeagueSharp에 오신 것을 환영합니다!");
+            }
+
+            if (Language == "pl")
+            {
+                Game.PrintChat("Zapraszamy do LeagueSharp!");
+            }
+
+            if (Language == "br")
+            {
+                Game.PrintChat("Bem-vindo ao LeagueSharp!");
+            }
+
+            if (Language == "ro")
+            {
+                Game.PrintChat("Bine ați venit la LeagueSharp!");
+            }
+
+            if (Language == "ro")
+            {
+                Game.PrintChat("Добро пожаловать в LeagueSharp!");
+            }
 
         }
     }

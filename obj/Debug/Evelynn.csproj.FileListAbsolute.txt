@@ -1,2 +1,0 @@
-C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\bin\Release\Evelynn.exe.config
-C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\obj\Debug\Evelynn.csprojResolveAssemblyReference.cache
