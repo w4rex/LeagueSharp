@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GarenOP.exe" size="5120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GarenOP.exe" size="6144">
       <assemblyIdentity name="GarenOP" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Y1WhrId6CQQHYUAEHx9xukuuco55KWAYDoWQyjX+a90=</dsig:DigestValue>
+        <dsig:DigestValue>/qp6xbsAPo7yRqiu6vI1+hVnahSv1nu3Neb+M2AeAoA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
-using SharpDX;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Text.RegularExpressions;
 using LeagueSharp;
 using LeagueSharp.Common;
+using SharpDX;
+using Color = System.Drawing.Color;
 
 namespace GinsengStrip
 {
@@ -14,30 +16,31 @@ namespace GinsengStrip
     class Program
     {
         public static System.Timers.Timer t;
+        public static String GlobalChat;
         static void Main(string[] args)
         {
-            CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
-            t = new System.Timers.Timer()
-            {
-                Enabled = true,
-                Interval = 7000
-            };
         }
 
         private static void Game_OnGameLoad(EventArgs args)
         {
+            GetChat();
             Game.OnGameUpdate += OnGameUpdate;
+        }
+
+        static void GetChat()
+        {
+            Process proc = Process.GetProcesses().First(p => p.ProcessName.Contains("League of Legends"));
+            String propFile = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(proc.Modules[0].FileName)))))));
+            propFile += @"Config\";
+            DirectoryInfo di = new DirectoryInfo(propFile).GetDirectories().OrderByDescending(d => d.LastWriteTimeUtc).First();
+            propFile = di.FullName + @"\game.cfg";
+            propFile = File.ReadAllText(propFile);
+            GlobalChat = new Regex("ShowAllChannelChat=(.+) Show").Match(propFile).Groups[1].Value;
         }
 
         private static void OnGameUpdate(EventArgs args)
         {
-            string zaman = Convert.ToString(Game.ClockTime);
-            if (Game.ClockTime == 1.30)
-            t.Elapsed += (object tSender, System.Timers.ElapsedEventArgs tE) =>
-            {
-                Game.PrintChat("anan");
-            };
-           
+                Game.PrintChat("Secenek =" + GlobalChat);
         }
     }
 }
