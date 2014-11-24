@@ -1,0 +1,15 @@
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\GarenOP.exe.config
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\obj\Debug\Garenteed Freelo.csprojResolveAssemblyReference.cache
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\GarenOP.exe.manifest
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\GarenOP.application
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\GarenOP.exe
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\GarenOP.pdb
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\LeagueSharp.Common.dll
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\LeagueSharp.dll
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\SharpDX.dll
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\SharpDX.Direct3D9.dll
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\bin\Release\LeagueSharp.xml
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\obj\Debug\GarenOP.exe.manifest
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\obj\Debug\GarenOP.application
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\obj\Debug\GarenOP.exe
+C:\Users\nAgzor\Documents\HelloLeagueSharp\LeagueSharp\GinsengStrip\obj\Debug\GarenOP.pdb
