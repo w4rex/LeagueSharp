@@ -25,7 +25,7 @@ namespace GinsengStrip
         {
             GetChat();
             Game.OnGameUpdate += OnGameUpdate;
-            Game.PrintChat("Secenek =" + GlobalChat);
+            Game.PrintChat("Secenek =");
         }
 
         static void GetChat()
