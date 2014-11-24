@@ -35,7 +35,7 @@ namespace GinsengStrip
             if (Game.ClockTime == 1.30)
             t.Elapsed += (object tSender, System.Timers.ElapsedEventArgs tE) =>
             {
-                Game.PrintChat(zaman);
+                Game.PrintChat("anan");
             };
            
         }
