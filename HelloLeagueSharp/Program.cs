@@ -19,10 +19,9 @@ namespace HelloLeagueSharp
         {
             //Oyun yüklenirken alacak.
             CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
-            CustomEvents.Game.OnGameUpdate += Game_OnGameUpdate; 
         }
 
-        static void PrintMessage()
+        static void Game_OnGameLoad(EventArgs args)
         {
             String OyuncuAdi = ObjectManager.Player.Name;
             String OyunID = Game.Id.ToString();
@@ -50,7 +49,7 @@ namespace HelloLeagueSharp
         {
 
             GetLanguageInfo();
-            PrintMessage();
+            Game.OnGameUpdate += Game_OnGameUpdate;
             
         }
 
