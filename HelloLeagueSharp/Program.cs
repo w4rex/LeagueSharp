@@ -19,25 +19,7 @@ namespace HelloLeagueSharp
         {
             //Oyun yüklenirken alacak.
             CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
-        }
-
-
-        static void Game_OnGameLoad(EventArgs args)
-        {
-
-            GetLanguageInfo();
-            PrintMessage();
-        }
-
-        static void GetLanguageInfo()
-        {
-            Process proc = Process.GetProcesses().First(p => p.ProcessName.Contains("League of Legends"));
-            String propFile = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(proc.Modules[0].FileName)))));
-            propFile += @"League of Legends\RADS\projects\lol_air_client\releases\";
-            DirectoryInfo di = new DirectoryInfo(propFile).GetDirectories().OrderByDescending(d => d.LastWriteTimeUtc).First();
-            propFile = di.FullName + @"\deploy\locale.properties";
-            propFile = File.ReadAllText(propFile);
-            Language = new Regex("locale=(.+)_").Match(propFile).Groups[1].Value;
+            CustomEvents.Game.OnGameUpdate += Game_OnGameUpdate; 
         }
 
         static void PrintMessage()
@@ -62,6 +44,25 @@ namespace HelloLeagueSharp
             Game.PrintChat(OyunVersiyonu);
             Game.PrintChat(OyunTuru);
 
+        }
+
+        static void Game_OnGameLoad(EventArgs args)
+        {
+
+            GetLanguageInfo();
+            PrintMessage();
+            
+        }
+
+        static void GetLanguageInfo()
+        {
+            Process proc = Process.GetProcesses().First(p => p.ProcessName.Contains("League of Legends"));
+            String propFile = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(proc.Modules[0].FileName)))));
+            propFile += @"League of Legends\RADS\projects\lol_air_client\releases\";
+            DirectoryInfo di = new DirectoryInfo(propFile).GetDirectories().OrderByDescending(d => d.LastWriteTimeUtc).First();
+            propFile = di.FullName + @"\deploy\locale.properties";
+            propFile = File.ReadAllText(propFile);
+            Language = new Regex("locale=(.+)_").Match(propFile).Groups[1].Value;
         }
     }
 }
