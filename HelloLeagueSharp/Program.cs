@@ -21,7 +21,7 @@ namespace HelloLeagueSharp
             CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
         }
 
-        static void Game_OnGameLoad(EventArgs args)
+        static void Game_OnGameUpdate(EventArgs args)
         {
             String OyuncuAdi = ObjectManager.Player.Name;
             String OyunID = Game.Id.ToString();
