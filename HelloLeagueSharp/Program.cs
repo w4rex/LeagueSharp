@@ -29,15 +29,7 @@ namespace HelloLeagueSharp
 
         static void Game_OnGameUpdate(EventArgs args)
         {
-            PrintMessage();
-        }
-
-
-        static void PrintMessage()
-        {
-
-            Game.PrintChat(ObjectManager.Player.Name;);
-
+            Game.PrintChat(ObjectManager.Player.Name);
         }
     }
 }
