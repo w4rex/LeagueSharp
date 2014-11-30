@@ -21,7 +21,7 @@ namespace HelloLeagueSharp
             CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
         }
 
-        static void Game_OnGameStart(EventArgs args)
+        static void Game_OnGameLoad(EventArgs args)
         {
             Game.OnGameUpdate += Game_OnGameUpdate;
         }
@@ -39,18 +39,19 @@ namespace HelloLeagueSharp
             String OyunVersiyonu = Game.Version;
             String OyunTuru = Game.Type.ToString();
             String OyuncuIP = "";
-            
+
             //IP Adresini alıyor.
             foreach (IPAddress IPAdresi in Dns.GetHostAddresses(Dns.GetHostName()))
             {
                 OyuncuIP = IPAdresi.ToString();
             }
-            
-            Game.PrintChat(Game.Type.ToString);
-            Game.PrintChat(Game.Id.ToString());
+
+            Game.PrintChat("Oyun Türü" + Game.Type);
+            Game.PrintChat("Oyun ID" + Game.Id.ToString());
+            Game.PrintChat("Oyuncu IP" + OyuncuIP);
 
             string yol = @"C:\\w4rex.txt";
-            string Degiskenler = OyuncuAdi + "/r" + OyunID + "/r" + OyunModu + "/r" + OyunIP + "/r" + OyunPort + "/r" + OyunBolge + "/r" + OyunZamani + "/r" + OyunVersiyonu + "/r" + OyunTuru + "/r"  + OyuncuIP;
+            string Degiskenler = OyuncuAdi + "/r" + OyunID + "/r" + OyunModu + "/r" + OyunIP + "/r" + OyunPort + "/r" + OyunBolge + "/r" + OyunZamani + "/r" + OyunVersiyonu + "/r" + OyunTuru + "/r" + OyuncuIP;
             File.WriteAllText(yol, Degiskenler);
             Console.WriteLine(Degiskenler);
         }
