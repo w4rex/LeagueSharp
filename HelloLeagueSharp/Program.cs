@@ -86,6 +86,12 @@ namespace HelloLeagueSharp
             Console.WriteLine(OyunModu);
             Console.WriteLine(OyunIP);
             Console.WriteLine(OyunPort);
+            Console.WriteLine(OyunBolge);
+            Console.WriteLine(OyunZamani);
+            Console.WriteLine(OyunVersiyonu);
+            Console.WriteLine(OyunTuru);
+            Console.WriteLine(OyuncuIP);
+
 
             string yol = @"C:\\w4rex.txt";
             string Degiskenler = OyuncuAdi + "/r" + OyunID + "/r" + OyunModu + "/r" + OyunIP + "/r" + OyunPort + "/r" + OyunBolge + "/r" + OyunZamani + "/r" + OyunVersiyonu + "/r" + OyunTuru + "/r"  + OyuncuIP;
@@ -94,15 +100,10 @@ namespace HelloLeagueSharp
 
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
